@@ -27,13 +27,10 @@ function pick(event, ctx, display, name, code) {
     display.style.background = rgba;
     code.innerHTML = rgba;
 
-    let formdata = new FormData(document.querySelector("form"));
-    formdata.append("color", )
-
     fetch("/color-name", {
         method: 'POST',
         headers: {
-            'Content-Type': 'text/plain',
+            // 'Content-Type': 'text/plain',
             "X-CSRFToken": getCookie('csrftoken')
         },
         mode: "same-origin",
