@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Color Detection</title>
+
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+
+    {% block stylesheets %} {% endblock %}        
+</head>
+
+<body>
+
+    <header>
+        <ul id="nav">
+            <li class="{% if tab == 'home' %} active {% endif %}">
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li><div></div></li>
+            <li class="{% if tab == 'palette' %} active {% endif %}">
+                <a href="{% url 'palette' %}">Palette</a>
+            </li>
+            <li><div></div></li>
+            <li class="{% if tab == 'quiz' %} active {% endif %}">
+                <a href="{% url 'quiz' %}">Quizlet</a>
+            </li>
+        </ul>       
+    </header>
+    <main>
+        {% block content %} {% endblock %}        
+    </main>
+
+</body>
+{% block scripts %} {% endblock %}        
+
+</html>

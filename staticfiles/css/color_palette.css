@@ -1,0 +1,48 @@
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#generate-btn {   
+    display: inline-block;
+    margin: 2rem;
+    padding: 1rem 2.5rem;
+    background: #cdaffa;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#color-palette {
+    height: max-content;
+    flex-grow: 1;
+    width: 100%;
+    padding: 1rem 3rem;
+}
+
+#color-palette > ul {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+#color-palette > ul > li:nth-child(even) {
+    background-color: grey;
+}
+
+#color-palette > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 25%; 
+    flex-grow: 1;
+}
+
+#color-palette > ul > li > div {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: white;
+}

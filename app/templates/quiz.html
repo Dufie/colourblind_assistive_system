@@ -1,0 +1,44 @@
+{% extends "layout/base.html"%}
+
+{% load static %}
+
+{% block stylesheets %}
+<link href="{% static 'css/quiz.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="quizlet">
+        <div class="card-holder">
+            <!-- <div class="card">
+                <h2 class="quiz-question">It is the color of the sky.</h2>
+                <div class="quiz-options">
+                    <ul>
+                        <li class="active">
+                            <div class="color"></div>
+                            <p class="text">Green</p>
+                        </li>
+                        <li>
+                            <div class="color"></div>
+                            <p class="text">White</p>
+                        </li>
+                        <li>
+                            <div class="color"></div>
+                            <p class="text">Red</p>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+        <div class="action-btn">
+            <div data-action="prev" class="prev"><i class="fa-solid fa-angle-left"></i>Prev</div>
+            <div data-action="next" class="next">Next<i class="fa-solid fa-angle-right"></i></div>
+            <div data-action="reset" class="reset">Reset</div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/quiz.js' %}"></script>
+{% endblock %}

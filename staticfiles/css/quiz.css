@@ -1,0 +1,102 @@
+
+.quizlet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-holder {
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 500px;
+    transition: all 1.5s ease-in-out;
+
+}
+
+.card {
+    transition: all 1.5s ease-in-out;
+    display: none;
+
+}
+.card-holder .card.active {
+    display: block;
+}
+
+
+.quiz-question {
+    padding: 3%;
+}
+
+.quiz-options {
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-options ul {
+    list-style: none;
+}
+
+.quiz-options ul li {
+    margin: 1rem;
+    padding: 0.4rem 4rem 0.4rem 0;
+    display: flex;
+    align-items: center;
+    border: #a0a0a077 solid 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.quiz-options ul li:hover {
+    border: #a0a0a0dd solid 1px;
+}
+
+.quiz-options ul li:active {
+    transform: translateY(1px);
+}
+
+.quiz-options ul li.active {
+    border: #4d4d4daa solid 1px;
+    transform: translateY(2px) scale(1.1, 1.1);
+    background-color: #e3e3e3;
+}
+
+.quiz-options ul li .color {
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.quiz-options ul li .text {
+    font-size: large;
+}
+
+.action-btn {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.action-btn > div {
+    padding: 0.5rem 2rem;
+    border-radius: 8px;
+    background-color: #0a0a23;
+    color: #f3f3f3;
+    margin: 0 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.action-btn > div > i {
+    padding: 0 4px;
+}
+.action-btn .reset {
+    display: none;
+}

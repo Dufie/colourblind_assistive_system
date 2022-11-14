@@ -1,0 +1,40 @@
+{% extends "layout/base.html"%}
+
+{% load static %}
+
+{% block stylesheets %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<section>
+    <div>
+        <input type="file" name="image">
+    </div>
+
+    <div></div>
+
+    <div id="color-display">
+        <div></div>
+        <ul>
+            <li>Color Name: <span id="name"></span></li>
+            <li>Color Code: <span id="code"></span></li>
+        </ul>
+    </div>
+</section>
+<section>
+
+    <div id="display">
+        <video id="video-display"></video>
+        <canvas height="300" id="image-display"></canvas>
+    </div>
+
+    <div data-live="false" id="take-photo">Turn on Camera</div>
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'js/color_picker.js' %}"></script>
+{% endblock %}
+
