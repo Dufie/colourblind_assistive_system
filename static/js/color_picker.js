@@ -33,7 +33,7 @@ function pick(event, ctx, display, name, code) {
             // 'Content-Type': 'text/plain',
             "X-CSRFToken": getCookie('csrftoken')
         },
-        mode: "same-origin",
+        // mode: "same-origin",
         body: JSON.stringify({ "color": `${data[0]},${data[1]},${data[2]}` })
     }).then(res => res.text()).then(response => {
         name.innerHTML = response

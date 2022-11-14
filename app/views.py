@@ -2,7 +2,7 @@ import json
 from django.http import HttpResponse
 from django.shortcuts import render
 import pandas as pd
-from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.csrf import csrf_exempt
 
 
 
@@ -26,7 +26,7 @@ def quiz(request):
     return render(request, 'quiz.html', context={"tab": "quiz"})
 
 
-
+@csrf_exempt
 def get_color(request):
     if request.method == "POST":
         color = json.loads(request.body).get("color", None)
