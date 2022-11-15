@@ -9,6 +9,11 @@ body {
     background-color: #F2E9E4;
 }
 
+.gradient {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
 header {
     height: 10vh;
     background-color: #22223B;
