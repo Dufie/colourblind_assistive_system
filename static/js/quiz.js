@@ -84,7 +84,7 @@ const questions = shuffleArray([
         new Option("Purple", "#A020F0"),
         new Option("Orange", "#FFA500"),
     ]),
-    new Question("What is the first color a baby can see?", 0, [
+    new Question("What is the first color a baby can see?", 1, [
         new Option("Black", "#000000"),
         new Option("Red", "#FF0000"),
         new Option("White", "#FFFFFF"),
