@@ -26,6 +26,7 @@ main {
     list-style: none;
     display: flex;
     height: 100%;
+    border: grey solid 0.25px;
 }
 
 #color-palette > ul > li:nth-child(even) {
@@ -36,6 +37,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     flex-basis: 25%; 
     flex-grow: 1;
 }
@@ -45,4 +47,6 @@ main {
     font-weight: 600;
     text-transform: uppercase;
     text-shadow: white;
+    text-align: center;
+    font-size: 0.98rem;
 }

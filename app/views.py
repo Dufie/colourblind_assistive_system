@@ -5,14 +5,12 @@ import pandas as pd
 from django.views.decorators.csrf import csrf_exempt
 
 
-
 def handle_uploaded_file(f):
     image_type = f.name.split(".")[-1]
 
     with open('storage/color_image.' + image_type, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
-
 
 
 # Create your views here.
@@ -38,6 +36,24 @@ def get_color(request):
             return HttpResponse(get_color_name(int(colors[0]), int(colors[1]), int(colors[2])))
 
     return HttpResponse("Unknown")
+
+
+@csrf_exempt
+def get_colors(request):
+    if request.method == "POST":
+        color = json.loads(request.body).get("colors", None)
+
+        if color is not None:
+            colors = color.split(",")
+            names = []
+
+            for color in colors:
+                names.append(get_color_name(int(color[0:2], 16), int(color[2:4], 16), int(color[3:], 16)))
+
+            return HttpResponse(",".join(names))
+
+    return HttpResponse("Unknown")
+
 
 def get_color_name(R, G, B):
     # Reading csv file with pandas and giving names to each column
